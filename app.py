@@ -14,7 +14,7 @@ def index():
 def graph():
   key = os.environ.get('AV_KEY')
   ticker = request.form['stockTicker']
-  url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={}&apikey=YWH2AW7CPHIE95F6'.format(ticker)
+  url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={}&apikey={}'.format(ticker,key)
   r = requests.get(url)
   d = r.json()
   df = pd.DataFrame.from_dict(d['Time Series (Daily)'],orient='index')
