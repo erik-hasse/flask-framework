@@ -1,2 +1,5 @@
 gunicorn==19.7.1
 requests==2.18.4
+flask==0.10.1
+bokeh==0.12.4
+pandas==0.20.3
